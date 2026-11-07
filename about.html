@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works · Simran's Focus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="doc">
+<header class="bar">
+  <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="13" cy="13" r="11"/><circle cx="13" cy="13" r="6"/><circle cx="13" cy="13" r="1.8" fill="currentColor" stroke="none"/></svg>Simran's Focus</a>
+  <a class="back" href="index.html">Back to the map</a>
+</header>
+<article>
+  <h1>A good forecast isn't enough</h1>
+  <p class="lede">Weather models have become faster and more accurate. But a warning only protects someone if they get it, understand it, decide, and act. Simran's Focus is a prototype that tries to close that gap, using Hurricane Milton (October 2024) as a replay.</p>
+
+  <h2>From forecast to action</h2>
+  <ol class="steps">
+    <li><b>Receive</b><span>The forecast reaches people early enough to matter. The timeline lets you see what was known five days out, then every day after.</span></li>
+    <li><b>Understand</b><span>Jargon becomes a plain sentence about your city: what could happen and when.</span></li>
+    <li><b>Decide</b><span>Uncertainty is shown, not hidden. You see how confident the forecast is about the path and about the storm's strength.</span></li>
+    <li><b>Act</b><span>Each risk level comes with concrete steps, plus help for common barriers like having no car or caring for pets.</span></li>
+  </ol>
+
+  <h2>How a risk level is made</h2>
+  <p>For the city you pick, the system looks at Milton's forecast path from the chosen moment onward. At each point it compares the distance to your city with the storm's wind reach, then softens the result by how wide the uncertainty cone is at that range. Early on, the cone is wide, so levels stay cautious. As landfall nears, the cone narrows and the levels sharpen.</p>
+  <table>
+    <tr><th>Level</th><th>What it means</th></tr>
+    <tr><td>Low</td><td>Serious impacts are unlikely. Keep checking updates.</td></tr>
+    <tr><td>Elevated</td><td>The storm could affect you. Review your plan and supplies.</td></tr>
+    <tr><td>High</td><td>Dangerous conditions are likely. Finish preparing.</td></tr>
+    <tr class="hot"><td>Extreme</td><td>Reserved for strong winds near your city. Follow evacuation orders.</td></tr>
+  </table>
+  <p class="k" style="color:var(--mute)">Extreme is deliberately hard to reach. If everything is an emergency, people stop listening.</p>
+
+  <h2>What it can't do</h2>
+  <h3>Rare, extreme storms</h3><p>Models learn from history, and extreme storms are rare.</p>
+  <h3>Strength</h3><p>Storm paths are easier to forecast than strength, which is why strength confidence is always shown as lower.</p>
+  <h3>A changing climate</h3><p>Past storms may not match tomorrow's conditions.</p>
+  <h3>Uneven data</h3><p>Some places have far more weather stations than others.</p>
+
+  <h2>Data and sources</h2>
+  <p>This demo uses a simplified approximation of Milton's track and a simplified uncertainty cone, based on National Hurricane Center reporting (landfall near Siesta Key, Florida, on October 9, 2024). It is not the official NHC cone. Future versions will use live NHC data.</p>
+
+  <p class="callout">This is a prototype for learning and demonstration. It is not a safety tool. In a real storm, follow guidance from the National Hurricane Center and your local emergency officials.</p>
+</article>
+</body>
+</html>

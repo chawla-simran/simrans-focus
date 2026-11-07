@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simran's Focus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app">
+<header class="bar">
+  <button id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="13" cy="13" r="11"/><circle cx="13" cy="13" r="6"/><circle cx="13" cy="13" r="1.8" fill="currentColor" stroke="none"/></svg>Simran's Focus</a>
+  <p class="tag">Hurricane Milton replay</p>
+</header>
+
+<nav id="drawer" aria-label="Menu">
+  <h2>Location</h2>
+  <div id="cities"></div>
+  <h2>Explore</h2>
+  <button class="item" data-open="risk">Your risk</button>
+  <button class="item" data-open="act">What to do</button>
+  <a class="item" href="about.html">How it works</a>
+  <p class="note">Prototype built on a simplified Milton track. Not for real emergencies. Follow your local officials.</p>
+</nav>
+<div id="scrim"></div>
+
+<div id="map"></div>
+
+<aside id="panel" aria-hidden="true">
+  <button class="x" id="closeBtn" aria-label="Close panel">&times;</button>
+  <section id="risk"></section>
+  <section id="act"></section>
+</aside>
+
+<footer class="tl">
+  <div class="tl-top"><div id="when"></div><div id="lead"></div></div>
+  <input id="slider" type="range" min="0" value="0" aria-label="Time before landfall">
+  <div class="ends"><span>5 days out</span><span>4</span><span>3</span><span>2</span><span>1</span><span>Landfall</span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="data/milton.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
